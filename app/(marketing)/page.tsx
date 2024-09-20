@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Layout } from "@/components/layouter";
+import { PageHeading, TypographyH3 } from "@/components/typography";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
 	Card,
@@ -11,7 +13,6 @@ import {
 import {
 	ChevronRight,
 	CreditCard,
-	DollarSign,
 	PieChart,
 	Smartphone,
 	Star,
@@ -19,11 +20,10 @@ import {
 
 export default function MarketingPage() {
 	return (
-		<div className="flex flex-col min-h-screen">
+		<Layout>
 			<header className="px-4 lg:px-6 h-14 flex items-center">
 				<Link className="flex items-center justify-center" href="#">
-					<DollarSign className="h-6 w-6" />
-					<span className="sr-only">MoneyTrack</span>
+					<PageHeading className="font-bold text-12xl">Khata-book</PageHeading>
 				</Link>
 				<nav className="ml-auto flex gap-4 sm:gap-6">
 					<Link
@@ -79,7 +79,7 @@ export default function MarketingPage() {
 						</div>
 					</div>
 				</section>
-				<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+				<section className="w-full py-12 md:py-24 lg:py-32  dark:bg-gray-800">
 					<div className="container px-4 md:px-6">
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
 							Key Features
@@ -169,7 +169,7 @@ export default function MarketingPage() {
 						</div>
 					</div>
 				</section>
-				<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+				{/* <section className="w-full py-12 md:py-24 lg:py-32 dark:bg-gray-800">
 					<div className="container px-4 md:px-6">
 						<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
 							Pricing Plans
@@ -258,7 +258,7 @@ export default function MarketingPage() {
 							</Card>
 						</div>
 					</div>
-				</section>
+				</section> */}
 			</main>
 			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
 				<p className="text-xs text-gray-500 dark:text-gray-400">
@@ -273,7 +273,7 @@ export default function MarketingPage() {
 					</Link>
 				</nav>
 			</footer>
-		</div>
+		</Layout>
 	);
 }
 
